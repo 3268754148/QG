@@ -1,0 +1,8 @@
+﻿  单向链表ADT.cpp
+E:\QG\大组\第一周\单向链表ADT\单向链表ADT\单向链表ADT.cpp(13,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\QG\大组\第一周\单向链表ADT\单向链表ADT\单向链表ADT.cpp(32,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\QG\大组\第一周\单向链表ADT\单向链表ADT\单向链表ADT.cpp(120,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\QG\大组\第一周\单向链表ADT\单向链表ADT\单向链表ADT.cpp(137,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\QG\大组\第一周\单向链表ADT\单向链表ADT\单向链表ADT.cpp(145,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\QG\大组\第一周\单向链表ADT\单向链表ADT\单向链表ADT.cpp(153,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  单向链表ADT.vcxproj -> E:\QG\大组\第一周\单向链表ADT\x64\Debug\单向链表ADT.exe
