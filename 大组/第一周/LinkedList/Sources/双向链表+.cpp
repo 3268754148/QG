@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<windows.h>
 struct node
 {
 	struct node* pre;
@@ -13,22 +14,22 @@ struct node* initialization(struct node* head)
 	scanf("%d", &p->data);
 	while (1)
 	{
-	q = (struct node*)malloc(sizeof(struct node));
-	scanf("%d", &q->data);
-	if (q->data == 0)
-	{
-		p->next =q;
-		q->pre = p;
-		q->next = NULL;
-		break;
-	}
-	else 
-	{
-		q->pre = p;
-		q->next = NULL;
-		p->next = q;
-		p=q;
-	}
+		q = (struct node*)malloc(sizeof(struct node));
+		scanf("%d", &q->data);
+		if (q->data == 0)
+		{
+			p->next = q;
+			q->pre = p;
+			q->next = NULL;
+			break;
+		}
+		else
+		{
+			q->pre = p;
+			q->next = NULL;
+			p->next = q;
+			p = q;
+		}
 	}
 	return q;
 }
@@ -55,7 +56,7 @@ struct node* insert(struct node* p)
 		{
 			q->pre = p;
 			q->next = NULL;
-			p->next =q;
+			p->next = q;
 			p = q;
 		}
 	}
@@ -124,7 +125,7 @@ int main()
 	struct node* head = (struct node*)malloc(sizeof(struct node));
 	head->pre = NULL;
 	head->next = NULL;
-	struct node* tail ;
+	struct node* tail;
 	while (1)
 	{
 		printf("1、链表初始化\n");
@@ -140,13 +141,15 @@ int main()
 		if (n == 1)
 		{
 			printf("1、链表初始化\n");
+			printf("输入0时，停止\n");
 			tail = initialization(head);
 			printf("链表初始化成功\n");
 		}
 		if (n == 2)
 		{
 			printf("2、插入链表\n");
-			tail=insert(tail);
+			printf("输入0时，停止\n");
+			tail = insert(tail);
 			printf("插入链表成功\n");
 		}
 		if (n == 3)
@@ -191,9 +194,10 @@ int main()
 			break;
 		}
 	}
+	system("pause");
 }
 
 
-	
-	
-	
+
+
+

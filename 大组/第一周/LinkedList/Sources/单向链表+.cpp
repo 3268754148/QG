@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<windows.h>
 struct node
 {
 	int data;
@@ -17,7 +18,7 @@ struct node* initialization(struct node* head)
 			tail->next = NULL;
 			break;
 		}
-		else 
+		else
 		{
 			tail = tail->next;
 		}
@@ -51,7 +52,7 @@ void print(struct node* head)
 		head = head->next;
 	}
 }
-void by_value(struct node* head,int num)
+void by_value(struct node* head, int num)
 {
 	while (head)
 	{
@@ -67,7 +68,7 @@ void by_point(struct node* head, int sum)
 	int s = 1;
 	while (head)
 	{
-		if (s==sum)
+		if (s == sum)
 		{
 			printf("%d\n", head->data);
 			break;
@@ -76,15 +77,15 @@ void by_point(struct node* head, int sum)
 		s++;
 	}
 }
-void del(struct node* head,int sum)
+void del(struct node* head, int sum)
 {
 	int s = 1;
 	while (head)
 	{
-		if (s == sum-1)
+		if (s == sum - 1)
 		{
 			head->next = head->next->next;
-			
+
 			break;
 		}
 		head = head->next;
@@ -98,14 +99,14 @@ void des(struct node* head)
 		struct node* L = head;
 		head = head->next;
 		free(L);
-			L->next = NULL;
+		L->next = NULL;
 	}
 }
 int main()
 {
 	struct node* head = (struct node*)malloc(sizeof(struct node));
 	head->next = NULL;
-	struct node* tail ;
+	struct node* tail;
 	while (1)
 	{
 		printf("1、链表初始化\n");
@@ -121,13 +122,15 @@ int main()
 		if (n == 1)
 		{
 			printf("链表初始化\n");
-			 tail = initialization(head);
+			printf("输入0时，停止\n");
+			tail = initialization(head);
 			printf("链表初始化成功\n\n");
 		}
 		if (n == 2)
 		{
 			printf("插入链表\n");
-			tail=insert(tail);
+			printf("输入0时，停止\n");
+			tail = insert(tail);
 			printf("插入链表成功\n\n");
 		}
 		if (n == 3)
@@ -172,4 +175,5 @@ int main()
 			break;
 		}
 	}
+	system("pause");
 }
